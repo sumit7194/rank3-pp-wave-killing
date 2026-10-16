@@ -27,6 +27,7 @@ Their Poisson bracket is a cubic integral:
 
 **Claim.** F is a rank-3 Killing tensor that is **irreducible in the polynomial sense**: it is not a sum of
 symmetrised products of lower-rank Killing tensors. The argument:
+
 1. The Killing vectors are exactly ∂_t and ∂_s. The upper bound comes from a second-order jet count at one point;
    the check script shows flat space gives 10 by the same count.
 2. Rank 3 can only split as 1 + 2 or 1 + 1 + 1, so every reducible rank-3 tensor has a Killing-vector factor.
