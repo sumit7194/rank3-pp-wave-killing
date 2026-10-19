@@ -1,0 +1,30 @@
+0. Ingredients
+  PASS  3-parameter family is Killing for h
+  PASS  h = 2|dw|^2 with w = (xi + i eta)^2
+  PASS  h-dual of the w-rotation is not closed   d(...) = 16*eta**2 + 16*xi**2
+  PASS  h-duals of the w-translations are closed: d(2x), d(2y)
+A. Integrals linear in momenta of the original system (time dependence allowed)
+  PASS  degree-2 and degree-1 parts vanish (Killing field; omega' = 0; f as stated)
+     degree-0 conditions: [-128*a*c1(t), -1280*Derivative(c2(t), (t, 2)), -16*a*c2(t), -160*Derivative(c1(t), (t, 2)), -288*Derivative(c1(t), (t, 2)), -32*Derivative(c1(t), (t, 2)), -384*Derivative(c2(t), (t, 2)), -48*a*c1(t), -64*Derivative(c2(t), (t, 2)), -96*a*c1(t), -960*Derivative(c2(t), (t, 2)), 128*a*c2(t), 16*Derivative(k(t), t), 16*a*c1(t), 16*a*om(t), 160*Derivative(c1(t), (t, 2)), 160*a*om(t), 240*Derivative(k(t), t), 288*Derivative(c1(t), (t, 2)), 32*Derivative(c1(t), (t, 2)), 320*Derivative(k(t), t), 48*a*c2(t), 80*a*om(t), 96*Derivative(k(t), t), 96*a*c2(t)]
+  PASS  for a != 0 the only solution is c1 = c2 = omega = 0, k' = 0 (I = const)   [{c1(t): 0, c2(t): 0, om(t): 0, Derivative(k(t), t): 0, Derivative(c1(t), (t, 2)): 0, Derivative(c2(t), (t, 2)): 0}]
+  PASS  control: a = 0 leaves c1, c2, omega unconstrained (free motion has linear integrals)   remaining: [-1280*Derivative(c2(t), (t, 2)), -160*Derivative(c1(t), (t, 2)), -288*Derivative(c1(t), (t, 2)), -32*Derivative(c1(t), (t, 2)), -384*Derivative(c2(t), (t, 2)), -64*Derivative(c2(t), (t, 2)), -960*Derivative(c2(t), (t, 2)), 16*Derivative(k(t), t), 160*Derivative(c1(t), (t, 2)), 240*Derivative(k(t), t), 288*Derivative(c1(t), (t, 2)), 32*Derivative(c1(t), (t, 2)), 320*Derivative(k(t), t), 96*Derivative(k(t), t)]
+B. Explicit solution of the Killing equation L_X g = 0
+  PASS  B1 (s,s) = 2 T_s
+  PASS  B1 (s,xi) = 8 rho^2 P_s + T_xi, (s,eta) likewise
+  PASS  B1 (s,t) = T_t + S_s - 2V T_s
+  PASS  B1 general solution of the s-row: s-row of L_X g vanishes identically
+  PASS  B2 T = alpha + beta1 x + beta2 y makes grad_h T Killing (Hessian zero in flat x, y)
+  PASS  B2 (i,j) block vanishes identically
+     (t,xi), (t,eta) at order s: [-4*(eta*Derivative(beta2(t), t) + xi*Derivative(beta1(t), t)), 4*(eta*Derivative(beta1(t), t) - xi*Derivative(beta2(t), t))]
+  PASS  B3 (t,i) order s forces beta1' = beta2' = 0
+     (t,t) order s conditions: [-2*Derivative(alpha(t), (t, 2)), -3*a*beta2(t), -6*Derivative(alpha(t), (t, 2)), -a*beta1(t), 3*a*beta1(t), a*beta2(t)]
+  PASS  B3 (t,t) order s forces beta1 = beta2 = 0 and alpha'' = 0 (a != 0)   [{beta1(t): 0, beta2(t): 0, Derivative(alpha(t), (t, 2)): 0}]
+  PASS  B4 integrability of (t,i): d(h(d_t Y)) = 0 forces omega' = 0   d(...) = 16*(eta**2 + xi**2)*Derivative(om(t), t)
+  PASS  B4 Z = -2 (c1' x + c2' y) + k(t)   [{z1(t): -2*Derivative(c1(t), t), z2(t): -2*Derivative(c2(t), t)}]
+  PASS  B5 every component except (t,t) now vanishes
+     (t,t) conditions: [-16*a*alpha1, -2*a*c2(t), -24*Derivative(c2(t), (t, 2)), -4*Derivative(c1(t), (t, 2)), -6*a*c1(t), -8*Derivative(c1(t), (t, 2)), -8*Derivative(c2(t), (t, 2)), -8*a*alpha1, 2*Derivative(k(t), t), 2*a*c1(t), 2*a*om(t), 4*Derivative(c1(t), (t, 2)), 4*a*om(t), 6*Derivative(k(t), t), 6*a*c2(t), 8*Derivative(c1(t), (t, 2))]
+  PASS  B5 for a != 0: c1 = c2 = omega = alpha1 = 0, k' = 0   [{alpha1: 0, c1(t): 0, c2(t): 0, om(t): 0, Derivative(k(t), t): 0, Derivative(c1(t), (t, 2)): 0, Derivative(c2(t), (t, 2)): 0}]
+  PASS  result: X = alpha0 d_t + k0 d_s, and it is Killing
+  PASS  control: a = 0 (flat space) leaves c1, c2, omega, alpha1, beta free -- extra Killing vectors appear   remaining: [-24*Derivative(c2(t), (t, 2)), -4*Derivative(c1(t), (t, 2)), -8*Derivative(c1(t), (t, 2)), -8*Derivative(c2(t), (t, 2)), 2*Derivative(k(t), t), 4*Derivative(c1(t), (t, 2)), 6*Derivative(k(t), t), 8*Derivative(c1(t), (t, 2)), -2*Derivative(alpha(t), (t, 2)), -6*Derivative(alpha(t), (t, 2))]
+
+ALL CHECKS AND CONTROLS PASS

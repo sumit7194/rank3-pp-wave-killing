@@ -1,7 +1,8 @@
 # A rank-3 Killing tensor on Filyukov's vacuum pp-wave
 
-*One-page summary, for a reader's check. Everything below is reproduced by `check_rank3.py` (sympy only, about
-4 seconds). It was produced with AI assistance; no human has yet checked it.*
+*One-page summary, for a reader's check. Everything below is reproduced by `check_rank3.py` and
+`check_killing_direct.py` (sympy only, a few seconds each). It was produced with AI assistance. Updated 2026-10-19:
+step 1 now rests on an explicit solution of the Killing equation, added after a reader questioned the jet-count bound.*
 
 ## The spacetime (Filyukov 2017, eq. 33)
 
@@ -28,8 +29,11 @@ Their Poisson bracket is a cubic integral:
 **Claim.** F is a rank-3 Killing tensor that is **irreducible in the polynomial sense**: it is not a sum of
 symmetrised products of lower-rank Killing tensors. The argument:
 
-1. The Killing vectors are exactly ∂_t and ∂_s. The upper bound comes from a second-order jet count at one point;
-   the check script shows flat space gives 10 by the same count.
+1. The Killing vectors are exactly ∂_t and ∂_s. `check_killing_direct.py` solves the Killing equation explicitly
+   (part B), and shows that the original 2D system has no integral linear in momenta, time-dependent or not
+   (part A). Independently, `check_rank3.py` bounds the Killing algebra by 2 with a second-order jet count at one
+   point (at a = 3; t → λt, s → s/λ and ξ → −ξ relate all a ≠ 0). That count is only an upper bound; here it meets
+   the two explicit Killing vectors. Flat space gives 10 by the same count, as a control.
 2. Rank 3 can only split as 1 + 2 or 1 + 1 + 1, so every reducible rank-3 tensor has a Killing-vector factor.
    It therefore vanishes at p_t = p_s = 0.
 3. F does not: its restriction there is (η p_ξ − ξ p_η)(p_ξ² + p_η²)/(32ρ²).
