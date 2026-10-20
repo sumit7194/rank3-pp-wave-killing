@@ -19,4 +19,9 @@ python check_killing_direct.py    # about 3 seconds; same expected last line
 `MANIFEST.md` gives each file's provenance and checksum. The work was done with AI assistance (Claude). Corrections
 are welcome.
 
+## Acknowledgement
+
+Thanks to Prof. Anton Galajinsky (Tomsk Polytechnic University) for reading the summary, and for asking for the
+direct proofs that are now in `check_killing_direct.py`.
+
 Author: Sumit Pal (independent researcher).

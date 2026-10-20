@@ -2,7 +2,7 @@
 
 *One-page summary, for a reader's check. Everything below is reproduced by `check_rank3.py` and
 `check_killing_direct.py` (sympy only, a few seconds each). It was produced with AI assistance. Updated 2026-10-19:
-step 1 now rests on an explicit solution of the Killing equation, added after a reader questioned the jet-count bound.*
+step 1 now rests on an explicit solution of the Killing equation, added after Prof. A. Galajinsky questioned the jet-count bound.*
 
 ## The spacetime (Filyukov 2017, eq. 33)
 

@@ -2,7 +2,7 @@
 
     python check_killing_direct.py          (well under a minute)
 
-Added 2026-10-19 after a reader asked for (i) a proof that the original sigma = 0
+Added 2026-10-19 after Prof. A. Galajinsky asked for (i) a proof that the original sigma = 0
 Smorodinsky-Winternitz system has no additional integral linear in momenta, and (ii) questioned the jet-count bound
 used in check_rank3.py (step 5). That bound is only an upper bound; this file adds explicit derivations that do not use it.
 
